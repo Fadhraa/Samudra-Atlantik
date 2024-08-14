@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samudra Atlantik</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <!-- Element to contain animated typing -->
+    <div id="element">
+
+
+
+    </div>
+    <img class="chest" src="chest tutup.png" alt="">
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    // Ambil elemen dengan class 'chest'
+    let chestElement = document.querySelector('.chest');
+    let element = document.getElementById('element');
+  
+    // Inisialisasi Typed.js
+    var typed = new Typed('#element', {
+      strings: [
+        '<h3>Samudra Atlantik</h3> ^2000',
+        '<p>Samudra Atlantik adalah samudra terbesar kedua di dunia, meliputi sekitar 1/5 permukaan Bumi. Kata Atlantik berasal dari mitologi Yunani yang berarti "Laut Atlas".</p>^3000',
+        '<p>Di dalamnya ada sebuah harta karun yang belum pernah ditemukan siapapun.</p>',
+        ''
+        ],
+      typeSpeed: 10,
+      onComplete: function() {
+        // Beri delay sebelum menghapus teks dan membuka chest
+        setTimeout(function() {
+          // Hapus semua teks yang ditulis
+          element.innerHTML = '';
+  
+          // Tambahkan kelas 'open' ke elemen chest untuk membukanya
+          chestElement.classList.add('open');
+        }, 2000); // 2000ms = 2 detik delay
+      }
+    });
+    chestElement.addEventListener('click', function() {
+      // Buat elemen <a> secara dinamis
+        window.location.href = 'img.html'
+    });
+  </script>
+  
+
+
+
+</body>
+
+  
+  </body>
+</html>

@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('1.jpeg');
+  width: 100%;
+  height: 120vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+div{
+  width: 100%;
+  font-size: 24px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  align-items: start;
+}
+div p{
+  font-size: 24px;
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 10px;
+}
+img{
+  position: absolute;
+  top: 0;
+  width: 220px;
+  height: 220px;
+  animation: down 10s linear forwards;
+}
+.chest{
+  display: none;
+}
+.chest.open{
+  display: block;
+  cursor: pointer;
+}
+@keyframes down {
+  to{
+    top: 500px;
+  }
+}
